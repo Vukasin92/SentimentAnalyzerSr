@@ -1,0 +1,1 @@
+Run 'scrapy crawl donesi' from command line in ReviewsScraper/donesi directory.
