@@ -58,7 +58,7 @@ function makeMat(boundary, data)
        if str2num(data{i}.reviewRating) > boundary
           yi = 1;
        else
-          yi = 0;
+          yi = -1;
        end
        y = [y  yi];
     end
