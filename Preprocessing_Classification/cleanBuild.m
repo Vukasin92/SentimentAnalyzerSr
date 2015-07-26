@@ -15,6 +15,7 @@
 %% Initialization
 clear ; close all; clc
 
+feature('DefaultCharacterSet','UTF-8');
 %filter unrated reviews and English comments
 !php.exe filter.php
 %stem all reviews and remove stop words
@@ -22,6 +23,7 @@ clear ; close all; clc
 %make vocabulary from words in reviews
 !del vocab.txt
 !php.exe vocabList.php
+
 
 %make matlab matrix of input data represented as a feature vector, using
 %bag of words approach

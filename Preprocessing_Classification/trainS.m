@@ -13,7 +13,7 @@
 %this program. If not, see http://www.gnu.org/licenses/.
 
 %% Initialization
-clear ; close all; clc
+clear ; close all;
 %% =========== Part 3: Train RBF SVM for Sentiment Analysis ========
 
 % Load the Sentiment Analysis dataset
