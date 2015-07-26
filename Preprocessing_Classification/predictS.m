@@ -13,7 +13,7 @@
 %this program. If not, see http://www.gnu.org/licenses/.
 
 %% Initialization
-clear ; clc
+clear ;
     load('sentimentsModel.mat');
 
     [ytrain, Xtrain] = libsvmread('dataTrain.txt');
