@@ -16,7 +16,7 @@
 
 %% Initialization
 clear ; close all; clc
-
+feature('DefaultCharacterSet','UTF-8');
 load('sentimentsModel.mat');
 
 !php.exe stemReview.php

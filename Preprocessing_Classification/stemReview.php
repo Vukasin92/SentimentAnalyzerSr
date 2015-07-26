@@ -12,13 +12,18 @@
 //details.
 //You should have received a copy of the GNU General Public License along with
 //this program. If not, see http://www.gnu.org/licenses/.
-
+	header('Content-Type: text/plain; charset=UTF-8');
 	include 'StemmerSr.php';
 	
 	$input = file_get_contents('reviewSample1.txt');
 	$myFile = "reviewSample2.txt";
 	$fh = fopen($myFile, 'w') or die("can't open file");
-	$full_body = preg_replace("/[^0-9a-zA-Z ]/", "", $input);
+	$full_body = preg_replace("/[^0-9a-zA-Zćčžđš ]/", "", $input);
+	$full_body = preg_replace("/ć/", "cy", $full_body);
+	$full_body = preg_replace("/č/", "cx", $full_body);
+	$full_body = preg_replace("/ž/", "zx", $full_body);
+	$full_body = preg_replace("/đ/", "dx", $full_body);
+	$full_body = preg_replace("/š/", "sx", $full_body);
 	$stemmed_body = stem($full_body);
 	fwrite($fh, $stemmed_body);
 	fclose($fh);
